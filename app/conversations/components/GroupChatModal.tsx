@@ -8,11 +8,12 @@ import { useState } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import Button from "@/app/components/Button";
+import { User } from "@prisma/client";
 
 interface GroupChatModalProps {
     isOpen?:boolean;
     onClose:()=>void;
-    users:User[]
+    users:User[];
 }
 const GroupChatModal:React.FC<GroupChatModalProps>=({
     isOpen,
